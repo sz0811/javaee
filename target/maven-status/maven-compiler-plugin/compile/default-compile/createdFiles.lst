@@ -1,6 +1,6 @@
 org\sang\service\UserService.class
 org\sang\controller\UserController.class
-org\sang\App.class
+org\sang\Application.class
 org\sang\model\entity\User.class
 org\sang\service\impl\UserServiceImpl.class
 org\sang\controller\HellerController.class
