@@ -1,40 +1,155 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <title>网页设计与网站建设课程网站</title>
-    <meta http-equiv="keywords" content="网页设计,网站建设,课程信息">
-    <meta http-equiv="description" content="网页设计与网站建设课程网站">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <style>
-        body {
-            background-color: #660000;
-            color:#FFF;
-        }
-        div.container {
-            padding:50px 70px 20px 10px;
-        }
-        span.title {
-            font-weight:bold;
-        }
-    </style>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <title>登录</title>
+
+    <link rel="stylesheet" href="login.css" />
+
 </head>
+
 <body>
-<div class="container">
-    <div>
-<span class="title">
-网页设计与网站建设课程网站
-</span>
-    </div>
-    <div class="content">
-        <p>
-            网页设计
-        </p>
-        <p>
-            网站建设
-        </p>
-        <p>
-            课程信息
-        </p>
-    </div>
-    <div>
+
+<div class="wrap">
+
+    <form action="#" th:action="@{api/user/login}" th:object="${user}" method="post">
+
+        <h2 class="title">登录</h2>
+
+        <div class="box">
+
+            <input type="text" placeholder="用户名" class="in01" th:field="*{userName}" />
+
+        </div>
+
+        <div class="box">
+
+            <input type="password" placeholder="密码" class="in01" th:field="*{pwd}"/>
+
+        </div>
+
+        <div class="box01">
+
+            <input type="submit" value="登录" class="btn" />
+
+            <input type="reset" value="重填" class="btn" />
+
+        </div>
+
+    </form>
+
+</div>
+
 </body>
+
 </html>
+<style type="text/css">　
+*{
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+body{
+
+    background: url("02.jpg");
+    background-size:100%;
+
+}
+
+h2{
+
+    color: #429bab;
+
+    size: 25px;
+
+}
+
+.wrap{
+
+    position: absolute;
+
+
+
+
+    width: 200px;
+
+    height: 250px;
+
+    left: 50%;
+
+    top: 50%;
+
+    margin-left: -100px;
+
+    margin-top: -125px;
+
+    border-radius: 5%;
+
+}
+
+.box{
+
+    margin-top: 25px;
+
+    margin-bottom: 25px;
+
+}
+
+/*.box01{
+
+margin-left: 65px;
+
+width: 40px;
+
+height: 35px;
+
+}*/
+
+.in01{
+
+    height: 35px;
+
+    width: 175px;
+
+    border: 0px;
+
+    border-radius: 10%;
+
+    margin-left: 10px;
+
+    background-color: #c5c5c3b0;
+
+}
+
+.btn{
+
+    width: 55px;
+
+    height: 29px;
+
+    margin-left: 30px;
+
+    border: 0px;
+
+    border-radius: 10%;
+
+    background-color: #94b6de4d;
+
+}
+
+.btn:hover{
+
+    background-color: #36648B;
+
+    color: white;
+
+}
+
+</style>
